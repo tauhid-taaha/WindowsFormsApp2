@@ -24,7 +24,7 @@ namespace WindowsFormsApp2
             {
                 // Read the text file containing user information
                 string filePath = "user_info.txt";
-                List<string> lines = File.ReadAllLines(filePath).ToList();
+               List<string> lines = File.ReadAllLines(filePath).ToList();
 
                 // Find the line containing the user's information
                 string userInfo = "";
@@ -40,8 +40,8 @@ namespace WindowsFormsApp2
 
                 // Display the user's information in the appropriate labels
                 string[] userInfoParts = userInfo.Split(',');
-                lblUsername.Text = userInfoParts[0];
-                lblFullName.Text = userInfoParts[2];
+                //lblfm.Text = userInfoParts[0];
+               //lbl.Text = userInfoParts[2];
             }
         }
     }

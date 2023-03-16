@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static WindowsFormsApp2.dashboard;
+using System.IO;
 
 namespace WindowsFormsApp2
 {
@@ -36,8 +38,9 @@ namespace WindowsFormsApp2
             if (AuthenticateUser(username, password))
             {
                 DashboardForm dashboardForm = new DashboardForm(username);
-                dashboardForm.Show();
+                dashboardForm.ShowDialog();
                 this.Hide();
+              
             }
             else
             {
@@ -50,7 +53,7 @@ namespace WindowsFormsApp2
         private bool AuthenticateUser(string username, string password)
         {
             // Read the text file containing user information
-            string filePath = "user_info.txt";
+            string filePath = $@"C:\Users\tauhidtaaha\source\repos\WindowsFormsApp2\user\{username}.txt";
             List<string> lines = File.ReadAllLines(filePath).ToList();
 
             // Check if the entered credentials match any stored credentials
