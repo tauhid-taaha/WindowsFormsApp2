@@ -65,6 +65,13 @@ namespace WindowsFormsApp2
 
             return false;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2form = new Form2();
+            form2form.ShowDialog();
+        }
     }
     }
 
